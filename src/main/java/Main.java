@@ -52,7 +52,7 @@ public class Main {
 
     try {
       for (String line : wrappedText) {
-        int delayInMillis = 50; // Adjust this value to control the typing speed (in milliseconds)
+        int delayInMillis = 20; // Adjust this value to control the typing speed (in milliseconds)
 
         int i = 0;
 
