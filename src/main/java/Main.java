@@ -29,7 +29,7 @@ public class Main {
 
     try {
 
-      Pattern pattern = Pattern.compile("^[A-ZА-ЯЁ].*");
+      Pattern pattern = Pattern.compile("^[A-ZА-ЯІЄЩЇ].*");
 
       System.out.print("Введіть персонажа жіночого роду: ");
       boolean b = true;
