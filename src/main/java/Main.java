@@ -28,14 +28,43 @@ public class Main {
     try {
 
       System.out.print("Введіть персонажа жіночого роду: ");
-      firstA = reader.readLine();
+      boolean b = true;
+      while (b) {
+
+        firstA = reader.readLine();
+
+        if (firstA.length() < 3) {
+          System.out.println("Invalid name");
+        } else {
+          b = false;
+        }
+      }
 
       System.out.print("Введіть персонажа чоловічого роду: ");
+      b = true;
+      while (b) {
 
-      secondA = reader.readLine();
+        secondA = reader.readLine();
+
+        if (firstA.length() < 3) {
+          System.out.println("Invalid name");
+        } else {
+          b = false;
+        }
+      }
 
       System.out.print("Введіть предмет: ");
-      object = reader.readLine();
+      b = true;
+      while (b) {
+
+        object = reader.readLine();
+
+        if (firstA.length() < 3) {
+          System.out.println("Invalid name");
+        } else {
+          b = false;
+        }
+      }
 
     } catch (IOException e) {
       System.out.println("error_code_1");
@@ -65,7 +94,8 @@ public class Main {
           }
         }
       }
-    } catch (RuntimeException | InterruptedException runtimeException){}
+    } catch (RuntimeException | InterruptedException runtimeException) {
+    }
 
   }
 
