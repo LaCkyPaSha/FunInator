@@ -4,6 +4,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
 
@@ -27,14 +29,18 @@ public class Main {
 
     try {
 
+      Pattern pattern = Pattern.compile("^[A-ZА-ЯЁ].*");
+
       System.out.print("Введіть персонажа жіночого роду: ");
       boolean b = true;
       while (b) {
 
         firstA = reader.readLine();
 
-        if (firstA.length() < 3) {
-          System.out.println("Invalid name");
+        Matcher matcher = pattern.matcher(firstA);
+
+        if (firstA.length() < 3 || !matcher.matches()) {
+          System.out.println("Невірне Ім'я");
         } else {
           b = false;
         }
@@ -46,8 +52,10 @@ public class Main {
 
         secondA = reader.readLine();
 
-        if (firstA.length() < 3) {
-          System.out.println("Invalid name");
+        Matcher matcher = pattern.matcher(secondA);
+
+        if (secondA.length() < 3 || !matcher.matches()) {
+          System.out.println("Невірне Ім'я");
         } else {
           b = false;
         }
@@ -59,8 +67,8 @@ public class Main {
 
         object = reader.readLine();
 
-        if (firstA.length() < 3) {
-          System.out.println("Invalid name");
+        if (object.length() < 3) {
+          System.out.println("Невірне Ім'я");
         } else {
           b = false;
         }
